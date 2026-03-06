@@ -13,14 +13,14 @@
 ## Task Documentation
 This repository contains the implementation of a **Textured Rotating Cube** using **React** and **Three.js**, with a focus on **camera logic modularization**.  
 
-The original camera code was part of a single file (`TexturedCube.jsx`) and has been refactored into a **separate module (`camera.js`)** to improve code organization and reusability.  
+The original camera code was part of a single file (`TexturedCube.jsx`) and has been refactored into a **separate module (`camera.jsx`)** to improve code organization and reusability.  
 
 For detailed documentation, please refer to the attached **PDF file**:  
 🔗 [Textured Cube Camera Task Documentation (PDF)](./Shaheer-154%20(Camera%20Task).pdf)  
 
 ---
 
-## Live Demonstration
+## Live Demonstration (Reference)
 You can view the working demo online:  
 🔗 [Live Demo](https://humeraaa.github.io/hci-cg-textured-cube/)  
 
