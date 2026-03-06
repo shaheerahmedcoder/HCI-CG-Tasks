@@ -1,31 +1,41 @@
+**Camera Logic Refactoring Task – 6 March 2026**  
 
-# React + Three.js Textured Cube
+---
 
-A standalone teaching demonstration developed using **React** and **Three.js**.
+## Student Information
+- **Name:** Shaheer Ahmed  
+- **Seat Number:** B23110006154  
+- **Section:** A 
+- **Course/Project:** HCI and CG  
 
-This project illustrates the fundamental components of a web-based 3D graphics pipeline:
+---
 
-- Scene
-- Camera
-- Renderer
-- Geometry
-- Texture Mapping
-- Animation Loop
+## Task Documentation
+This repository contains the implementation of a **Textured Rotating Cube** using **React** and **Three.js**, with a focus on **camera logic modularization**.  
 
-The repository is topic-based and reusable across academic years.  
-Sequencing and depth of discussion may vary depending on cohort and instructional focus.
+The original camera code was part of a single file (`TexturedCube.jsx`) and has been refactored into a **separate module (`camera.js`)** to improve code organization and reusability.  
+
+For detailed documentation, please refer to the attached **PDF file**:  
+🔗 [Textured Cube Camera Task Documentation (PDF)](./Shaheer-154%20(Camera%20Task).pdf)  
 
 ---
 
 ## Live Demonstration
-
-🔗 https://humeraaa.github.io/hci-cg-textured-cube/
+You can view the working demo online:  
+🔗 [Live Demo](https://humeraaa.github.io/hci-cg-textured-cube/)  
 
 ---
 
-## Course Materials
+## Original Code Reference
+The base implementation of the cube was provided by the instructor:  
+🔗 [Original Code](https://humeraaa.github.io/hci-cg-textured-cube/)  
 
-Comprehensive lecture slides and supporting materials are maintained separately:
+---
 
-📁 https://drive.google.com/drive/folders/17oEN1nv6PbZcYIwQZbokY0EOZ7d_aADg?usp=drive_link
+## Refactored Code
+The refactored code separates the **camera logic** into its own module while keeping the output identical to the original.  
+🔗 [Refactored Code Repository](https://github.com/shaheerahmedcoder/HCI-CG-Tasks/tree/main/Camera%20task)  
+
+---
+
 
