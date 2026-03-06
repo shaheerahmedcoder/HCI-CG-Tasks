@@ -28,7 +28,7 @@ You can view the working demo online:
 
 ## Original Code Reference
 The base implementation of the cube was provided by the instructor:  
-🔗 [Original Code](https://humeraaa.github.io/hci-cg-textured-cube/)  
+🔗 [Original Code](https://github.com/humeraaa/hci-cg-textured-cube/blob/main/src/TexturedCube.jsx)  
 
 ---
 
