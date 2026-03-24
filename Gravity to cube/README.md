@@ -9,8 +9,6 @@ A Three.js + React simulation of a cube falling under gravity, using a **right-h
 https://github.com/user-attachments/assets/5be0075d-2d6d-40df-a3bc-561c22c46b01
 
 
-
-https://github.com/user-attachments/assets/6c26bd5d-d57b-48cf-b247-d441837656d0
 ## Physics
 - Gravity acts in **−Y** direction at **9.8 m/s²**
 - Euler integration: `v += g·dt`, `y += v·dt`
