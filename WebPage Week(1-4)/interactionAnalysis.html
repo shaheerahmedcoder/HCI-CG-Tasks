@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shaheer Ahmed – Interaction Analysis</title>
+</head>
+<body>
+
+<style>
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333333;
+    background-color: #fafafa;
+  }
+
+  .content-section {
+    background-color: #ffffff;
+  }
+
+  .norman-goms-match {
+    background-color: #e1c6fff5;
+  }
+
+  .divergence-note {
+    background-color: #f9ffc5;
+  }
+
+  h1, h2, h3 {
+    color: #1a1a1a;
+  }
+
+  a {
+    color: #a328eb;
+  }
+
+  .current-nav {
+    font-weight: bold;
+    color: #c0392b;
+  }
+
+  footer {
+    color: #7f8c8d;
+    font-size: 0.9em;
+  }
+
+  table {
+    background-color: #ffffff;
+  }
+
+   .ref-154 {
+    background-color: rgb(0, 0, 0);
+    color: yellow;
+  }
+</style>
+
+<header>
+  <h1>HCI Assignment 01 (Week 1–4)</h1>
+  <h3>Interaction Analysis</h3>
+  <h4><i>Shaheer Ahmed – 154</i></h4>
+</header>
+
+<nav aria-label="Primary navigation">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cv.html">CV-About Me</a></li>
+    <li><a href="interactionAnalysis.html" aria-current="page">Models Interaction Analysis</a></li>
+    <li><a href="ngk.html">KLM/Norman/GOMS</a></li>
+    <li><a href="summary.html">Summaries</a></li>
+  <li><a href="Lab.html">Lab</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section class="content-section">
+    <h2>Norman and GOMS: Interaction-Level Comparison</h2>
+
+    <p>
+      <strong>Scenario:</strong> A user wants to record a shared dinner expense of
+      $50 that they paid on behalf of a friend named “Shaheer” using a mobile expense
+      tracking application.
+    </p>
+
+    <table border="1">
+      <caption>
+        Mapping Norman’s Action Cycle to GOMS elements for a shared-expense task
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Norman’s Stage</th>
+          <th scope="col">Observed User Behavior</th>
+          <th scope="col">GOMS Perspective</th>
+          <th scope="col">Analytical Relationship</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="norman-goms-match">
+          <th scope="row">Goal ↔ GOAL</th>
+          <td>
+            The user decides to log the payment so the expense is properly tracked
+            and reimbursed later.
+          </td>
+          <td>
+            <strong>GOAL:</strong> RECORD-EXPENSE.<br>
+            Represents the overall intention motivating the task.
+          </td>
+          <td>
+            ✅ <strong>Strong Alignment</strong><br>
+            Both models begin with a clearly defined objective.
+          </td>
+        </tr>
+
+        <tr class="norman-goms-match">
+          <th scope="row">Intention / Plan ↔ METHOD</th>
+          <td>
+            The user chooses to use the “Quick Add” option instead of navigating
+            through group menus.
+          </td>
+          <td>
+            <strong>METHOD:</strong> QUICK-ENTRY.<br>
+            <strong>Selection Rule:</strong> If minimal input is required, prefer Quick Add.
+          </td>
+          <td>
+            ✅ <strong>Conceptual Correspondence</strong><br>
+            GOMS formalizes the decision using rules.
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Specify</th>
+          <td>
+            The user visually searches for input fields and decides where to enter
+            the amount and select the friend’s name.
+          </td>
+          <td>
+            <em>Implicit.</em><br>
+            GOMS assumes the user already knows the interface layout.
+          </td>
+          <td class="divergence-note">
+            <strong>Key Difference:</strong> Norman captures exploratory cognition;
+            GOMS abstracts it away.
+          </td>
+        </tr>
+
+        <tr class="norman-goms-match">
+          <th scope="row">Execute ↔ OPERATORS</th>
+          <td>
+            The user taps buttons, types “50,” selects “Shaheer,” and confirms the action.
+          </td>
+          <td>
+            <strong>OPERATORS:</strong> K (typing), P (pointing), B (button press).
+          </td>
+          <td>
+            ✅ <strong>Direct Mapping</strong><br>
+            Physical actions correspond precisely to GOMS operators.
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Perceive / Interpret / Evaluate</th>
+          <td>
+<pre>
+Perceive: Confirmation message and updated balance appear.
+Interpret: The system successfully recorded the expense.
+Evaluate: The user feels confident the task is complete.
+</pre>
+          </td>
+          <td>
+            <em>Not Modeled.</em><br>
+            GOMS presumes successful completion once execution ends.
+          </td>
+          <td class="divergence-note">
+            <strong>Critical Distinction:</strong>
+            Norman emphasizes feedback and closure of the Gulf of Evaluation.
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </section>
+
+  <section class="content-section">
+    <h3>Analytical Insight</h3>
+
+    <div class="divergence-note">
+      <p>
+        For the <strong>“Who Paid”</strong> expense task, Norman’s model is particularly
+        useful for identifying usability problems related to discoverability and feedback.
+        In contrast, GOMS and KLM are more effective when predicting expert performance,
+        such as estimating how quickly multiple expenses can be entered in succession.
+      </p>
+    </div>
+
+    <p>
+      This demonstrates why Norman’s model is preferred during early design evaluation,
+      while GOMS/KLM are better suited for optimization and comparison of mature interfaces.
+    </p>
+
+    <p>
+      <strong>References:</strong>
+      Dix, A., Finlay, J., Abowd, G., Beale, R.
+      <em>Human–Computer Interaction</em>, 3rd Edition.
+      Pearson Education, 2004.
+      Chapters 3 (Interaction), 9 (GOMS), and 12 (Predictive Models).
+    </p>
+  </section>
+
+</main>
+
+<footer>
+   <p class="ref-154">
+    References:
+    Dix, A., Finlay, J., Abowd, G., Beale, R.
+    <em>Human–Computer Interaction</em>, 3rd Edition.
+    Pearson Education, 2004.
+  </p>
+  <p><a href="index.html">Back to Home</a></p>
+</footer>
+
+</body>
+</html>

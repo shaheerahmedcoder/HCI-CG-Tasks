@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shaheer Ahmed – Lab</title>
+</head>
+<body>
+
+ <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #333333;
+      background-color: #fafafa;
+    }
+    header {
+      color: #000000;
+    }
+    .week-container {
+      background-color: #ffffff;
+    }
+    .highlight-box {
+      background-color: #fff3cd;
+    }
+    .theory-note {
+      background-color: #e7f3ff;
+    }
+    h1 {
+      color: #1a1a1a;
+    }
+    header h1 {
+      color: #000000;
+    }
+    nav a {
+      color: #9980ff;
+    }
+    .current-nav {
+      font-weight: bold;
+      color: #c0392b;
+    }
+    footer {
+      color: #7f8c8d;
+      font-size: 0.9em;
+    }
+    pre {
+      background-color: #f4f4f4;
+      font-size: 0.85em;
+      color: #2c3e50;
+    }
+    code {
+      font-family: Consolas, "Courier New", monospace;
+    }
+    table {
+      background-color: #ffffff;
+    }
+  </style>
+
+<header>
+  <h1>HCI Assignment 01 (Week 1–4)</h1>
+  <h3>Lab HTML</h3>
+  <h4><i>Shaheer Ahmed – 154</i></h4>
+</header>
+
+<nav aria-label="Primary navigation">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cv.html">CV-About Me</a></li>
+    <li><a href="interactionAnalysis.html">Interaction Analysis</a></li>
+    <li><a href="ngk.html" aria-current="page">KLM/Norman/GOMS</a></li>
+    <li><a href="summary.html">Summaries</a></li>
+    <li><a href="Lab.html">Lab</a></li>
+  </ul>
+</nav>
+<main>
+  <section class="week-container">
+    <h2>Exam Practice Table</h2>
+    <p>The following table identifies common errors in semantic HTML and accessibility, specifically focused on the requirements for Lab 01.</p>
+
+    <table border="1">
+      <caption>Common HTML structure and accessibility mistakes with corrections</caption>
+      <thead>
+        <tr>
+          <th scope="col">UI Element / Issue</th>
+          <th scope="col">Wrong HTML (with mistake)</th>
+          <th scope="col">Correct UI Element</th>
+          <th scope="col">Correct HTML</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Duplicate <code>h1</code> tags</th>
+          <td class="highlight-box">
+<pre><code>&lt;header&gt;&lt;h1&gt;Project Overview&lt;/h1&gt;&lt;/header&gt;
+&lt;section&gt;&lt;h1&gt;Task List&lt;/h1&gt;&lt;/section&gt;</code></pre>
+          </td>
+          <td>Use one <code>h1</code> per page; <code>h2</code> or <code>h3</code> for subsections.</td>
+          <td class="theory-note">
+<pre><code>&lt;h1&gt;Project Overview&lt;/h1&gt;
+&lt;h2&gt;Task List&lt;/h2&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Images without <code>alt</code></th>
+          <td class="highlight-box">
+<pre><code>&lt;img src="chart.png"&gt;</code></pre>
+          </td>
+          <td>All images should have descriptive <code>alt</code> text.</td>
+          <td class="theory-note">
+<pre><code>&lt;img src="chart.png" 
+alt="Bar chart showing weekly user interactions"&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Incorrect heading order</th>
+          <td class="highlight-box">
+<pre><code>&lt;h3&gt;Step 1&lt;/h3&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;</code></pre>
+          </td>
+          <td>Headings must follow a logical sequence.</td>
+          <td class="theory-note">
+<pre><code>&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h3&gt;Step 1&lt;/h3&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Using <code>div</code> instead of semantic tags</th>
+          <td class="highlight-box">
+<pre><code>&lt;div class="footer"&gt;...&lt;/div&gt;
+&lt;div class="menu"&gt;...&lt;/div&gt;</code></pre>
+          </td>
+          <td>Use <code>&lt;footer&gt;</code> and <code>&lt;nav&gt;</code> for proper semantics.</td>
+          <td class="theory-note">
+<pre><code>&lt;footer&gt;...&lt;/footer&gt;
+&lt;nav&gt;...&lt;/nav&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Vague links</th>
+          <td class="highlight-box">
+<pre><code>&lt;a href="interaction.html"&gt;Learn more&lt;/a&gt;</code></pre>
+          </td>
+          <td>Use descriptive link text for clarity and accessibility.</td>
+          <td class="theory-note">
+<pre><code>&lt;a href="interaction.html"&gt;Detailed Interaction Analysis&lt;/a&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Table headers missing <code>scope</code></th>
+          <td class="highlight-box">
+<pre><code>&lt;tr&gt;
+  &lt;th&gt;Task&lt;/th&gt;
+  &lt;th&gt;Time&lt;/th&gt;
+&lt;/tr&gt;</code></pre>
+          </td>
+          <td>Add <code>scope="col"</code> or <code>scope="row"</code> to header cells.</td>
+          <td class="theory-note">
+<pre><code>&lt;tr&gt;
+  &lt;th scope="col"&gt;Task&lt;/th&gt;
+  &lt;th scope="col"&gt;Time&lt;/th&gt;
+&lt;/tr&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Label not linked to input</th>
+          <td class="highlight-box">
+<pre><code>&lt;label&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email"&gt;</code></pre>
+          </td>
+          <td>Labels should use the <code>for</code> attribute to associate with the input ID.</td>
+          <td class="theory-note">
+<pre><code>&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email"&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Navigation links not in a list</th>
+          <td class="highlight-box">
+<pre><code>&lt;nav&gt;
+  &lt;a href="home.html"&gt;Home&lt;/a&gt;
+  &lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+          </td>
+          <td>Navigation should be structured using <code>ul</code> &gt; <code>li</code>.</td>
+          <td class="theory-note">
+<pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <hr>
+  <p><a href="index.html">Back to Home</a></p>
+</footer>
+
+</body>
+</html>

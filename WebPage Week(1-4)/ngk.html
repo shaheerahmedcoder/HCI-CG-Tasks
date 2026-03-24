@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shaheer Ahmed – NGK</title>
+</head>
+<body>
+
+<style>
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333333;
+    background-color: #fafafa;
+  }
+
+  .content-section {
+    background-color: #ffffff;
+  }
+
+  .theory-note {
+    background-color: #b9b7f9;
+  }
+
+  .highlight-box {
+    background-color: #fff3cd;
+  }
+
+  nav a {
+    color: #972ff1;
+  }
+
+  .current-nav {
+    font-weight: bold;
+    color: #c0392b;
+  }
+
+  footer {
+    color: #7f8c8d;
+    font-size: 0.9em;
+  }
+
+  pre {
+    background-color: #f4f4f4;
+    font-family: monospace;
+    font-size: 0.9em;
+  }
+
+  .ref-154 {
+    background-color: rgb(0, 0, 0);
+    color: yellow;
+  }
+</style>
+
+<header>
+  <h1>HCI Assignment 01 (Week 1–4)</h1>
+  <h3>Norman • GOMS • KLM</h3>
+  <h4><i>Shaheer Ahmed – 154</i></h4>
+</header>
+
+<nav aria-label="Primary navigation">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cv.html">CV-About Me</a></li>
+    <li><a href="interactionAnalysis.html">Interaction Analysis</a></li>
+    <li><a href="ngk.html" aria-current="page">KLM/Norman/GOMS</a></li>
+    <li><a href="summary.html">Summaries</a></li>
+    <li><a href="Lab.html">Lab</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- Norman -->
+  <article class="content-section">
+    <h2>1. Norman’s Model (Execution–Evaluation Cycle)</h2>
+
+    <p>
+      Norman’s model explains interaction as a continuous cycle between the user’s
+      mental goals and the system’s visible state. The model is primarily used to
+      identify usability breakdowns caused by poor mappings, feedback, or system
+      visibility (Dix et al., Ch. 3).
+    </p>
+
+    <section class="theory-note">
+      <h3>Seven Stages of Action – Illustrated Using a Light Switch</h3>
+      <ol>
+        <li><strong>Goal:</strong> The user decides that additional light is needed.</li>
+        <li><strong>Intention:</strong> The user plans to turn on the light.</li>
+        <li><strong>Specification:</strong> The user determines the physical actions required.</li>
+        <li><strong>Execution:</strong> The switch is pressed.</li>
+        <li><strong>Perception:</strong> The user observes the room becoming brighter.</li>
+        <li><strong>Interpretation:</strong> The brightness is understood as the light being on.</li>
+        <li><strong>Evaluation:</strong> The user confirms that the goal has been achieved.</li>
+      </ol>
+    </section>
+
+    <p>
+      <strong>Design Insight:</strong> Problems often occur when users cannot easily
+      discover how to perform actions or cannot clearly interpret system feedback.
+    </p>
+
+    <p>
+      <strong>Limitations:</strong> The model does not differentiate clearly between novice
+      and expert behavior and focuses more on understanding interaction than predicting speed.
+    </p>
+
+    <p>
+      <strong>Reference:</strong> Dix et al., <em>Human–Computer Interaction</em>, Chapter 3.
+    </p>
+  </article>
+
+  <hr>
+
+  <!-- GOMS -->
+  <article class="content-section">
+    <h2>2. GOMS Model</h2>
+
+    <p>
+      GOMS is an analytical framework used to describe how experienced users perform
+      tasks efficiently. Unlike Norman’s model, GOMS focuses on task structure rather
+      than feedback interpretation (Dix et al., Ch. 9).
+    </p>
+
+    <ul>
+      <li><strong>Goals:</strong> Desired outcomes the user wants to achieve.</li>
+      <li><strong>Operators:</strong> Elementary actions such as keystrokes or mouse clicks.</li>
+      <li><strong>Methods:</strong> Ordered sequences of operators used to complete a goal.</li>
+      <li><strong>Selection Rules:</strong> Conditions that determine which method is chosen.</li>
+    </ul>
+
+    <p class="highlight-box">
+      <strong>Expert User Assumption:</strong> GOMS assumes users already understand the
+      interface, so perception and evaluation stages are not modeled explicitly.
+    </p>
+
+    <h3>Example: Expense Entry Task (Who Paid Scenario)</h3>
+
+    <pre>
+GOAL: RECORD-EXPENSE
+.   [METHOD: QUICK-ENTRY
+.           SELECT-ADD-EXPENSE
+.           ENTER-NAMES
+.           ENTER-AMOUNT
+.           CONFIRM-SAVE
+.
+.    METHOD: GROUP-BASED-ENTRY
+.           SELECT-GROUP
+.           ADD-EXPENSE-TO-GROUP
+.           ENTER-AMOUNT
+.           CONFIRM-SAVE]
+    </pre>
+
+    <p>
+      Such hierarchical task descriptions help designers evaluate cognitive workload,
+      predict efficiency, and compare alternative interface designs.
+    </p>
+
+    <p>
+      <strong>Reference:</strong> Dix et al., <em>Human–Computer Interaction</em>, Chapter 9.
+    </p>
+  </article>
+
+  <hr>
+
+  <!-- KLM -->
+  <article class="content-section">
+    <h2>3. Keystroke-Level Model (KLM)</h2>
+
+    <p>
+      The Keystroke-Level Model is a quantitative extension of GOMS that predicts how
+      long it takes an expert user to perform routine tasks without errors. It is
+      most suitable for well-learned, repetitive actions (Dix et al., Ch. 12).
+    </p>
+
+    <section class="theory-note">
+      <h3>KLM Focus Areas</h3>
+      <ul>
+        <li><strong>Mental Preparation:</strong> Cognitive readiness before action sequences.</li>
+        <li><strong>Physical Execution:</strong> Keystrokes, pointing, clicking, and hand movement.</li>
+      </ul>
+    </section>
+
+    <h3>Standard KLM Operators</h3>
+    <table border="1">
+      <caption>Typical Operator Durations (Expert Users)</caption>
+      <thead>
+        <tr>
+          <th scope="col">Operator</th>
+          <th scope="col">Meaning</th>
+          <th scope="col">Time (s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">K</th><td>Keystroke</td><td>0.2</td></tr>
+        <tr><th scope="row">P</th><td>Pointing</td><td>1.1</td></tr>
+        <tr><th scope="row">H</th><td>Hand movement</td><td>0.4</td></tr>
+        <tr><th scope="row">M</th><td>Mental operator</td><td>1.35</td></tr>
+        <tr><th scope="row">B</th><td>Button press or release</td><td>0.1</td></tr>
+      </tbody>
+    </table>
+
+    <p class="highlight-box">
+      <strong>Design Value:</strong> By summing operator times, designers can objectively
+      compare interface alternatives before implementation.
+    </p>
+
+    <p>
+      <strong>Reference:</strong> Dix et al., <em>Human–Computer Interaction</em>, Chapter 12.
+    </p>
+  </article>
+
+</main>
+
+<footer>
+  <hr>
+  <p class="ref-154">
+    References:
+    Dix, A., Finlay, J., Abowd, G., Beale, R.
+    <em>Human–Computer Interaction</em>, 3rd Edition.
+    Pearson Education, 2004.
+    Chapters 3, 9, and 12.
+  </p>
+
+  <p><a href="index.html">Back to Home</a></p>
+</footer>
+
+</body>
+</html>
