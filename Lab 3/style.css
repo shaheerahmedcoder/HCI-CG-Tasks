@@ -1,0 +1,17 @@
+#actionBtn {
+  padding: 10px 20px;
+  margin: 10px 0;
+  transition: transform 0.1s;
+}
+
+#actionBtn:hover {
+  background-color: #e0e0e0;
+}
+
+#status {
+  margin-top: 10px;
+}
+
+.limit {
+  color: red;
+}

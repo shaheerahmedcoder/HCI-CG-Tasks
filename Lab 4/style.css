@@ -1,0 +1,38 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+/* AFFORDANCE - Blue border */
+#actionBtn {
+    padding: 10px 20px;
+    border: 3px solid #007bff; /* Blue */
+    background: white;
+    cursor: pointer;
+}
+
+/* MAPPING - Green border */
+#status {
+    margin-top: 10px;
+    border: 3px solid #28a745; /* Green */
+    padding: 10px;
+    min-height: 20px;
+}
+
+/* FEEDBACK - Yellow background on click */
+.click-feedback {
+    background-color: #ffc107 !important; /* Yellow */
+    transform: scale(0.95);
+}
+
+/* CONSTRAINT - Red border when disabled */
+.constrained {
+    border-color: #dc3545 !important; /* Red */
+}
+
+/* SIGNIFIER - Purple background when disabled */
+.disabled-signifier {
+    background-color: #6f42c1 !important; /* Purple */
+    color: white;
+    opacity: 0.7;
+}
