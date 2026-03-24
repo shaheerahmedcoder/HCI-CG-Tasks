@@ -1,32 +1,73 @@
 # LAB 04 (HCI Principles Interactive Demo)
 
 ## Overview
-This project demonstrates several **Human-Computer Interaction (HCI) principles** through a simple interactive button interface.
+This project demonstrates important **Human-Computer Interaction (HCI) principles** through a simple interactive button interface.
 
-The demo visually represents key HCI concepts such as affordance, mapping, feedback, constraints, and signifiers using colors and UI changes.
+The interface visually represents HCI concepts such as affordance, mapping, feedback, constraint, and signifier using colors and interface changes.
 
 ---
 
 ## HCI Principles Demonstrated
 
-### 1. Affordance
-The button has a **blue border**, indicating it is interactive and can be clicked.
+### Affordance
+The button has a **blue border**, indicating that it is clickable and interactive.
 
-### 2. Mapping
-The status area has a **green border**, showing where the system feedback will appear.
+### Mapping
+The status area has a **green border**, clearly showing where system feedback will appear.
 
-### 3. Feedback
-When the button is clicked, it briefly turns **yellow** and scales slightly to indicate the action was received.
+### Feedback
+When the button is clicked, it briefly turns **yellow and slightly shrinks**, providing immediate visual feedback to the user.
 
-### 4. Constraint
-After **3 clicks**, the button becomes disabled and its border turns **red**, preventing further actions.
+### Constraint
+After **3 clicks**, the button becomes disabled and its border changes to **red**, preventing further actions.
 
-### 5. Signifier
-When disabled, the button turns **purple**, clearly indicating that it can no longer be used.
+### Signifier
+When disabled, the button changes to a **purple background**, clearly indicating that the action can no longer be performed.
 
 ---
 
 ## Project Structure
-Initially, the entire project was implemented in **a single HTML file** containing embedded CSS and JavaScript.
+Initially, the entire implementation was inside **one HTML file** that contained HTML, CSS, and JavaScript together.
 
-For better structure and maintainability, the code has been separated into three files:
+To improve the structure of the project, the code was separated into three files:
+
+project-folder/
+│
+├── index.html   → Contains the webpage structure  
+├── style.css    → Contains styling and HCI visual indicators  
+└── script.js    → Contains interaction logic and functionality  
+
+---
+
+## Improvements Made
+The following improvements were implemented **without affecting the output or functionality of the project**:
+
+- Separated the project into **three different files (HTML, CSS, JavaScript)**
+- Moved all CSS styling from the HTML file into `style.css`
+- Moved JavaScript functionality into `script.js`
+- Improved code readability and organization
+- Followed **standard web development best practices**
+- Made the project easier to maintain and expand in the future
+
+All visual HCI demonstrations and interactions remain exactly the same as in the original implementation.
+
+---
+
+## How It Works
+1. The user clicks the **Process Data** button.
+2. The system provides **visual feedback** using a yellow highlight effect.
+3. The status area updates with the number of processed actions.
+4. After **3 clicks**, the button becomes disabled.
+5. Visual indicators show that the action is no longer allowed.
+
+---
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
+---
+
+## Purpose
+This project is designed to demonstrate **Human-Computer Interaction (HCI) principles in a simple and visual way**, helping users understand how interface design communicates actions and system states.has been separated into three files:
