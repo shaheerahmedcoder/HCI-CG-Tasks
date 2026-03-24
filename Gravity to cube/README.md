@@ -2,6 +2,13 @@
 
 A Three.js + React simulation of a cube falling under gravity, using a **right-hand coordinate system** (Y up, X right, Z toward viewer) — matching the Vuforia spatial frame reference theory.
 
+## Gravity Simulation on 3D Cube Using Right Hand Coordinate System (Live Demo )
+
+
+
+https://github.com/user-attachments/assets/5be0075d-2d6d-40df-a3bc-561c22c46b01
+
+
 ## Physics
 - Gravity acts in **−Y** direction at **9.8 m/s²**
 - Euler integration: `v += g·dt`, `y += v·dt`
