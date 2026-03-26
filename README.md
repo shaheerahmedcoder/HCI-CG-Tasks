@@ -21,8 +21,8 @@ It focuses on understanding how camera positioning and movement affect the scene
 A creative **3D cube project** themed around Eid.  
 It demonstrates simple 3D object rendering and interaction concepts.
 
-## deployment link
-
+### deployment link
+https://eidcube-154.vercel.app/
 
 ---
 
@@ -30,15 +30,15 @@ It demonstrates simple 3D object rendering and interaction concepts.
 This task demonstrates how **gravity** can influence a 3D cube.  
 It focuses on object movement and basic simulation behavior.
 
-## deployment link
-
+### deployment link
+https://gravitycube-154.vercel.app/
 ---
 
 ### 🧪 Lab 3
 Contains files and experiments related to **Lab 3** of the course.  
 It includes implementations and demonstrations of concepts covered in that lab session.
 
-## deployment link
+### deployment link
 
 ---
 
@@ -54,14 +54,15 @@ Some projects in this lab were originally implemented in a **single HTML file**,
 
 This separation improves **code organization, readability, and maintainability** without affecting the functionality.
 
-## deployment link
-
+### deployment link
+https://lab4-154.vercel.app/
 ---
 
 ### ⚙ Three.js Setup
 This folder contains the **initial setup for Three.js with React**, used for building 3D web graphics applications.
 
-## deployment link
+### deployment link 
+https://3js-setup-154.vercel.app/
 
 ---
 
@@ -71,6 +72,6 @@ This folder contains webpage development work completed during **Weeks 1–4** o
 It includes:
 All the content studied during Week 1-4 and also have HTML assignment too
 
-## deployment link
-
+### deployment link
+https://shaheerahmedcoder.github.io/hci-cg-2026-154/
 ---
