@@ -21,17 +21,24 @@ It focuses on understanding how camera positioning and movement affect the scene
 A creative **3D cube project** themed around Eid.  
 It demonstrates simple 3D object rendering and interaction concepts.
 
+## deployment link
+
+
 ---
 
 ### 🌍 Gravity to Cube
 This task demonstrates how **gravity** can influence a 3D cube.  
 It focuses on object movement and basic simulation behavior.
 
+## deployment link
+
 ---
 
 ### 🧪 Lab 3
 Contains files and experiments related to **Lab 3** of the course.  
 It includes implementations and demonstrations of concepts covered in that lab session.
+
+## deployment link
 
 ---
 
@@ -47,10 +54,14 @@ Some projects in this lab were originally implemented in a **single HTML file**,
 
 This separation improves **code organization, readability, and maintainability** without affecting the functionality.
 
+## deployment link
+
 ---
 
 ### ⚙ Three.js Setup
 This folder contains the **initial setup for Three.js with React**, used for building 3D web graphics applications.
+
+## deployment link
 
 ---
 
@@ -60,6 +71,6 @@ This folder contains webpage development work completed during **Weeks 1–4** o
 It includes:
 All the content studied during Week 1-4 and also have HTML assignment too
 
-A deployment link was also added to demonstrate the hosted version of the webpage.
+## deployment link
 
 ---
