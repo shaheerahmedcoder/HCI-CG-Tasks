@@ -1,4 +1,7 @@
-# Gravity Cube 🧊
+# Gravity Cube Deployment Link
+https://gravitycube-154.vercel.app/
+
+# Gravity Cube 
 
 A Three.js + React simulation of a cube falling under gravity, using a **right-hand coordinate system** (Y up, X right, Z toward viewer) — matching the Vuforia spatial frame reference theory.
 
