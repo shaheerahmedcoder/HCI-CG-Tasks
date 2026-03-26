@@ -1,7 +1,7 @@
 # HCI-CG Tasks
 
 This repository contains various tasks and lab work related to **Human Computer Interaction (HCI)** and **Computer Graphics (CG)**.  
-Each folder represents a specific assignment, experiment, or mini project completed during the course.
+Each folder represents a specific assignment, experiment, or mini project completed during the course. (+ Deployments)
 
 The repository is structured to keep each task organized and easy to understand.
 
@@ -28,10 +28,11 @@ https://eidcube-154.vercel.app/
 
 ### 🌍 Gravity to Cube
 This task demonstrates how **gravity** can influence a 3D cube.  
-It focuses on object movement and basic simulation behavior.
+It focuses on object movement and basic simulation behavior. 
 
 ### deployment link
 https://gravitycube-154.vercel.app/
+
 ---
 
 ### 🧪 Lab 3
@@ -39,6 +40,7 @@ Contains files and experiments related to **Lab 3** of the course.
 It includes implementations and demonstrations of concepts covered in that lab session.
 
 ### deployment link
+https://lab3-154.vercel.app/
 
 ---
 
@@ -56,6 +58,7 @@ This separation improves **code organization, readability, and maintainability**
 
 ### deployment link
 https://lab4-154.vercel.app/
+
 ---
 
 ### ⚙ Three.js Setup
@@ -74,4 +77,5 @@ All the content studied during Week 1-4 and also have HTML assignment too
 
 ### deployment link
 https://shaheerahmedcoder.github.io/hci-cg-2026-154/
+
 ---
