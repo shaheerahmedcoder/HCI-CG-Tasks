@@ -1,3 +1,6 @@
+# LAB 04 Deployment Link
+https://lab4-154.vercel.app/
+
 # LAB 04 (HCI Principles Interactive Demo)
 
 ## Overview
