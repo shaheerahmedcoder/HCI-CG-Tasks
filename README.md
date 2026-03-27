@@ -61,7 +61,7 @@ https://lab4-154.vercel.app/
 
 ---
 
-### ⚙ Three.js Setup
+### Three.js Setup
 This folder contains the **initial setup for Three.js with React**, used for building 3D web graphics applications.
 
 ### deployment link 
