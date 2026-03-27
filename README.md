@@ -11,13 +11,13 @@ The repository is structured to keep each task organized and easy to understand.
 
 The following tasks are currently included in this repository:
 
-### 📷 Camera Task
+### Camera Task
 This task demonstrates basic camera handling concepts used in graphics environments.  
 It focuses on understanding how camera positioning and movement affect the scene.
 
 ---
 
-### 🎲 Eid Cube
+### Eid Cube
 A creative **3D cube project** themed around Eid.  
 It demonstrates simple 3D object rendering and interaction concepts.
 
@@ -26,7 +26,7 @@ https://eidcube-154.vercel.app/
 
 ---
 
-### 🌍 Gravity to Cube
+### Gravity to Cube
 This task demonstrates how **gravity** can influence a 3D cube.  
 It focuses on object movement and basic simulation behavior. 
 
@@ -35,7 +35,7 @@ https://gravitycube-154.vercel.app/
 
 ---
 
-### 🧪 Lab 3
+### Lab 3
 Contains files and experiments related to **Lab 3** of the course.  
 It includes implementations and demonstrations of concepts covered in that lab session.
 
@@ -44,7 +44,7 @@ https://lab3-154.vercel.app/
 
 ---
 
-### 🧪 Lab 4
+### Lab 4
 Contains files and experiments related to **Lab 4** of the course.  
 This lab includes demonstrations of **HCI principles and interactive UI behavior**.
 
@@ -69,7 +69,7 @@ https://3js-setup-154.vercel.app/
 
 ---
 
-### 🌐 WebPage Week (1–4)
+### WebPage Week (1–4)
 This folder contains webpage development work completed during **Weeks 1–4** of the course.
 
 It includes:
