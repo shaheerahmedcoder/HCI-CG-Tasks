@@ -119,12 +119,11 @@ export default function App() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     mount.appendChild(renderer.domElement);
 
-    // Scene
+
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x87ceeb);
     scene.fog = new THREE.Fog(0xc8e8f5, 40, 110);
 
-    // Camera
     const camera = new THREE.PerspectiveCamera(52, W / H, 0.1, 300);
     let sph = { theta: 0, phi: Math.PI / 3.8, radius: 14 };
     const tgt = new THREE.Vector3(0, 2, 0);
@@ -173,7 +172,7 @@ export default function App() {
     zoomInRef.current     = () => { sph.radius = Math.max(5, sph.radius-2);  applyCamera(); };
     zoomOutRef.current    = () => { sph.radius = Math.min(28, sph.radius+2); applyCamera(); };
 
-    // Lights
+    
     scene.add(new THREE.AmbientLight(0xfff3d0, 0.8));
     const sun = new THREE.DirectionalLight(0xfff8e0, 1.4);
     sun.position.set(12,28,8); sun.castShadow=true;
@@ -185,7 +184,7 @@ export default function App() {
     const fill=new THREE.DirectionalLight(0xd0e8ff,0.35);
     fill.position.set(-8,10,15); scene.add(fill);
 
-    // Ground & road
+
     const mkPlane=(w,d,col,y,z)=>{
       const m=new THREE.Mesh(new THREE.PlaneGeometry(w,d),new THREE.MeshLambertMaterial({color:col}));
       m.rotation.x=-Math.PI/2; m.position.set(0,y,z); m.receiveShadow=true; scene.add(m);
@@ -196,7 +195,6 @@ export default function App() {
       e.rotation.x=-Math.PI/2; e.position.set(x,0.03,7); scene.add(e);
     });
 
-    // Building
     const BG=new THREE.Group(); BG.position.set(0,0,-17); scene.add(BG);
     const bM=new THREE.MeshLambertMaterial({color:0xdfd0a0});
     const bD=new THREE.MeshLambertMaterial({color:0xb8a070});
@@ -233,7 +231,7 @@ export default function App() {
     [-7,7].forEach(x=>aT(x,-7.5,0.85));
     [-22,22].forEach(x=>aT(x,0,1.1));
 
-    // GIFT BOX 
+
     const BS=2.6, BH=2.2, WALL=0.13;
     const gG=new THREE.Group(); gG.position.set(0,0,4); scene.add(gG);
 
@@ -288,7 +286,7 @@ export default function App() {
     const lr2=new THREE.Mesh(new THREE.BoxGeometry(0.26,0.07,BS+0.12),matRibbon);
     lr2.position.set(0,WALL/2+0.05,BS/2); lidPivot.add(lr2); lidRibs.push(lr2);
 
-    // Color rebuilder
+   
     rebuildColors.current = () => {
       matBox.color.set(R.boxColor.current);
       matLid.color.set(R.lidColor.current);
@@ -297,7 +295,6 @@ export default function App() {
       matBorder.color.set(R.lidBorderColor.current);
     };
 
-    // Text sprite
     let textSprite=null;
     const buildText=()=>{
       if(textSprite){ textSprite.material.map?.dispose(); textSprite.material.dispose(); scene.remove(textSprite); textSprite=null; }
@@ -324,7 +321,7 @@ export default function App() {
       if(boxOpenState){ textSprite.material.opacity=1; textSprite.scale.set(textSprite.userData.fw,textSprite.userData.fh,1); textSprite.position.y=BH+3.2; }
     };
 
-    // Confetti
+    
     const CCOLS=[0xff4136,0xFFD700,0x2ecc40,0x0074d9,0xff69b4,0xffffff,0xff6f00,0x9b59b6];
     const particles=[];
     for(let i=0;i<280;i++){
@@ -378,7 +375,7 @@ export default function App() {
     openBoxRef.current   = doOpen;
     closeBoxRef.current  = doClose;
 
-    //  GRAVITY
+  
     let gravityActive = false, gravVel = 0, onGround = false;
     toggleGravityRef.current = () => {
       gravityActive = !gravityActive;
@@ -418,7 +415,7 @@ export default function App() {
       gG.add(dot); vtxMeshes.push(dot);
     });
 
-    // Edge tubes  cylinders oriented along each edge
+   
     EDGES.forEach(([a,b]) => {
       const pA = new THREE.Vector3(...CORNERS[a]);
       const pB = new THREE.Vector3(...CORNERS[b]);
@@ -443,7 +440,7 @@ export default function App() {
       vtxMeshes.forEach(m => m.visible = verticesActive);
     };
 
-    //  SPLIT / UNSPLIT
+  
     let splitActive = false, splitProg = 0, splitAnimDir = 0;
     const SPLIT_DIST = 3.0;
 
@@ -485,7 +482,6 @@ export default function App() {
     };
 
 
-    // Raycaster for button click
     const raycaster=new THREE.Raycaster();
     const mouse=new THREE.Vector2();
     let mdPos={x:0,y:0};
@@ -509,7 +505,7 @@ export default function App() {
     renderer.domElement.addEventListener("click",onClick);
     renderer.domElement.addEventListener("mousemove",onHov);
 
-    // Animate loop
+    
     const animate=()=>{
       animFrame=requestAnimationFrame(animate);
       time+=0.016;
@@ -521,7 +517,6 @@ export default function App() {
       if(voiceRotDir==="down")  { sph.phi=Math.min(Math.PI*0.48,sph.phi+0.018); applyCamera(); }
       if(voiceSpinning)         { sph.theta+=0.012; applyCamera(); }
 
-      // Box float — only when gravity/split not active
       if (!gravityActive && !splitActive) {
         if (!boxOpenState && openProg < 0.05) {
           gG.position.y = Math.sin(time*1.2)*0.08;
@@ -532,7 +527,6 @@ export default function App() {
         }
       }
 
-      //GRAVITY 
       if (gravityActive) {
         if (!onGround) {
           gravVel -= 0.018;
@@ -551,7 +545,6 @@ export default function App() {
         gG.scale.z += (1 - gG.scale.z) * 0.12;
       }
 
-      // ── SPLIT ANIMATION ──────────────────────────────────────
       if (splitAnimDir !== 0) {
         splitProg = Math.max(0, Math.min(1, splitProg + splitAnimDir * 0.03));
         const ease = 1 - Math.pow(1 - splitProg, 3); // easeOutCubic
@@ -564,7 +557,7 @@ export default function App() {
         if (splitProg >= 1 || splitProg <= 0) splitAnimDir = 0;
       }
 
-      // Lid animation
+  
       if(animDir===1&&openProg<1){
         openProg=Math.min(openProg+0.022,1);
         lidPivot.rotation.x=-easeOutBack(openProg)*Math.PI*0.88;
@@ -625,7 +618,6 @@ export default function App() {
   }, []);
 
 
-  //  UI
   const lbl = t => <span style={{fontSize:"12px",color:"rgba(255,255,255,0.6)",display:"block",marginBottom:"4px"}}>{t}</span>;
   const ColorRow=({l,v,s})=>(
     <div style={{marginBottom:"10px"}}>
@@ -638,7 +630,7 @@ export default function App() {
     </div>
   );
 
-  // Mic button appearance based on push-to-talk status
+  
   const statusColors = {
     idle:       { bg:"radial-gradient(circle,#1a3a1a,#0d1f0d)", border:"2px solid rgba(100,200,100,0.35)", icon:"🎤",  label:"CLICK TO SPEAK" },
     recording:  { bg:"radial-gradient(circle,#cc0000,#880000)", border:"3px solid #ff4444",               icon:"🔴", label:"RECORDING…" },
