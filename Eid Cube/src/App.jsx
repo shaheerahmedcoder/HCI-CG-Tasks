@@ -12,7 +12,6 @@ const PRESETS = {
 export default function App() {
   const mountRef = useRef(null);
 
-  // ── React state ──────────────────────────────────────────────
   const [isOpen,         setIsOpen]         = useState(false);
   const [showPanel,      setShowPanel]      = useState(false);
   const [showVoiceHelp,  setShowVoiceHelp]  = useState(false);
@@ -37,7 +36,6 @@ export default function App() {
     msgText:        useRef(msgText),
   };
 
-  // Three.js callback refs (set inside useEffect, called from anywhere)
   const rebuildColors  = useRef(null);
   const rebuildText    = useRef(null);
   const toggleBoxRef   = useRef(null);
@@ -54,7 +52,6 @@ export default function App() {
   const toggleVerticesRef = useRef(null);
   const toggleSplitRef    = useRef(null);
 
-  // ── Sync state → ref + trigger rebuild ──────────────────────
   useEffect(() => { R.boxColor.current       = boxColor;       rebuildColors.current?.(); }, [boxColor]);
   useEffect(() => { R.lidColor.current       = lidColor;       rebuildColors.current?.(); }, [lidColor]);
   useEffect(() => { R.ribbonColor.current    = ribbonColor;    rebuildColors.current?.(); }, [ribbonColor]);
@@ -63,7 +60,6 @@ export default function App() {
   useEffect(() => { R.textColor.current      = textColor;      rebuildText.current?.();   }, [textColor]);
   useEffect(() => { R.msgText.current        = msgText;        rebuildText.current?.();   }, [msgText]);
 
-  // ── Preset applier (used by both UI and voice) ───────────────
   const applyPreset = useCallback((name) => {
     const p = PRESETS[name.toLowerCase()];
     if (!p) return;
