@@ -2,9 +2,6 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import * as THREE from "three";
 import { useVoice } from "./useVoice.js";
 
-// ─────────────────────────────────────────────────────────────────
-// PRESETS  (shared between Customize panel + voice "applyPreset")
-// ─────────────────────────────────────────────────────────────────
 const PRESETS = {
   classic:  { box:"#c0392b", lid:"#922b21", rib:"#f1c40f", btn:"#c0881a", border:"#7b1a10", txt:"#FFD700" },
   ocean:    { box:"#2ab4e8", lid:"#f07090", rib:"#f5a623", btn:"#c0881a", border:"#0d7aa8", txt:"#ffffff" },
@@ -30,7 +27,6 @@ export default function App() {
   const [verticesOn,     setVerticesOn]     = useState(false);
   const [splitOn,        setSplitOn]        = useState(false);
 
-  // ── Refs (Three.js reads these, avoids stale closure) ────────
   const R = {
     boxColor:       useRef(boxColor),
     lidColor:       useRef(lidColor),
