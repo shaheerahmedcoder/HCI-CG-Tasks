@@ -67,7 +67,7 @@ export default function App() {
     setBtnColor(p.btn); setLidBorderColor(p.border); setTextColor(p.txt);
   }, []);
 
-  // ── Voice action callbacks (stable refs for useVoice) ────────
+  
   const voiceActions = {
     openBox:      () => openBoxRef.current?.(),
     closeBox:     () => closeBoxRef.current?.(),
@@ -94,7 +94,6 @@ export default function App() {
     unsplitBox:     () => toggleSplitRef.current?.(false),
   };
 
-  // ── Initialise Gemini Live voice hook ───────────────────────
   const {
     listening, toggle: toggleVoice,
     lastTranscript: lastHeard, lastCommand, lastStatus, log: voiceLog, supported,
@@ -106,9 +105,8 @@ export default function App() {
   const startRecording  = toggleVoice;
   const stopRecording   = () => {};
 
-  // ════════════════════════════════════════════════════════════
   //  THREE.JS SCENE
-  // ════════════════════════════════════════════════════════════
+
   useEffect(() => {
     const mount = mountRef.current;
     let W = mount.clientWidth, H = mount.clientHeight;
@@ -235,7 +233,7 @@ export default function App() {
     [-7,7].forEach(x=>aT(x,-7.5,0.85));
     [-22,22].forEach(x=>aT(x,0,1.1));
 
-    // ══════════════ GIFT BOX ══════════════
+    // GIFT BOX 
     const BS=2.6, BH=2.2, WALL=0.13;
     const gG=new THREE.Group(); gG.position.set(0,0,4); scene.add(gG);
 
@@ -379,9 +377,8 @@ export default function App() {
     toggleBoxRef.current = doToggle;
     openBoxRef.current   = doOpen;
     closeBoxRef.current  = doClose;
-    // ══════════════════════════════════════════════════════════════
+
     //  GRAVITY
-    // ══════════════════════════════════════════════════════════════
     let gravityActive = false, gravVel = 0, onGround = false;
     toggleGravityRef.current = () => {
       gravityActive = !gravityActive;
@@ -394,9 +391,7 @@ export default function App() {
       }
     };
 
-    // ══════════════════════════════════════════════════════════════
     //  VERTICES — cyan cylinder tubes + bright corner dots
-    // ══════════════════════════════════════════════════════════════
     let verticesActive = false;
     const vtxMeshes = []; // all vertex/edge meshes toggled together
 
@@ -423,7 +418,7 @@ export default function App() {
       gG.add(dot); vtxMeshes.push(dot);
     });
 
-    // Edge tubes — cylinders oriented along each edge
+    // Edge tubes  cylinders oriented along each edge
     EDGES.forEach(([a,b]) => {
       const pA = new THREE.Vector3(...CORNERS[a]);
       const pB = new THREE.Vector3(...CORNERS[b]);
@@ -448,9 +443,7 @@ export default function App() {
       vtxMeshes.forEach(m => m.visible = verticesActive);
     };
 
-    // ══════════════════════════════════════════════════════════════
     //  SPLIT / UNSPLIT
-    // ══════════════════════════════════════════════════════════════
     let splitActive = false, splitProg = 0, splitAnimDir = 0;
     const SPLIT_DIST = 3.0;
 
@@ -539,7 +532,7 @@ export default function App() {
         }
       }
 
-      // ── GRAVITY ──────────────────────────────────────────────
+      //GRAVITY 
       if (gravityActive) {
         if (!onGround) {
           gravVel -= 0.018;
@@ -631,9 +624,8 @@ export default function App() {
     };
   }, []);
 
-  // ════════════════════════════════════════════════════════════
+
   //  UI
-  // ════════════════════════════════════════════════════════════
   const lbl = t => <span style={{fontSize:"12px",color:"rgba(255,255,255,0.6)",display:"block",marginBottom:"4px"}}>{t}</span>;
   const ColorRow=({l,v,s})=>(
     <div style={{marginBottom:"10px"}}>
