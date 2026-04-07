@@ -1,7 +1,15 @@
-# 🎁 Eid Mubarak – Three.js Interactive Gift Box
+# Eid Mubarak Cube Assignment Deployment Link
+https://eidcube-154.vercel.app/
+
+# 🎁 Eid Mubarak Cube Assignment
 
 A 3D interactive Eid Mubarak scene built with **React 18** + **Three.js** + **Vite**.  
 Voice-controlled using the **Web Speech API** with instant local NLP — no external AI API needed.
+
+
+
+https://github.com/user-attachments/assets/e490acbf-6cf0-4a82-b746-89e3126b8d50
+
 
 ---
 
