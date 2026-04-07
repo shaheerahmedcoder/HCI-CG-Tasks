@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #d9a7c7, #fffcdc);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+h1 {
+    color: #333;
+}
+
+#stimulus {
+    font-size: 60px;
+    margin: 40px;
+    height: 80px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #333;
+    color: white;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.stats {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.instructions {
+    margin-top: 20px;
+    font-size: 16px;
+}
