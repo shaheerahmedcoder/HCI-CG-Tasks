@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 95%;
+    --foreground: 220 13% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+    --primary: 213 80% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 90%;
+    --secondary-foreground: 220 13% 18%;
+    --muted: 220 14% 92%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 213 80% 94%;
+    --accent-foreground: 213 80% 40%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 82%;
+    --input: 220 13% 82%;
+    --ring: 213 80% 50%;
+    --radius: 0.375rem;
+
+    /* PolyEdit MS Paint-style tokens */
+    --pe-bg: #f0f0f0;
+    --pe-surface: #f5f6f8;
+    --pe-panel: #ffffff;
+    --pe-card: #f8f9fb;
+    --pe-border: #d4d7dd;
+    --pe-border2: #c0c4cc;
+    --pe-blue: #1a73e8;
+    --pe-red: #d93025;
+    --pe-yellow: #e8a317;
+    --pe-green: #188038;
+    --pe-teal: #0d8a72;
+    --pe-purple: #7b1fa2;
+    --pe-text: #202124;
+    --pe-muted: #80868b;
+    --pe-muted2: #5f6368;
+    --pe-ribbon: #e8eaed;
+    --pe-toolbar: #f1f3f4;
+    --pe-highlight: #e8f0fe;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 13% 18%;
+    --sidebar-primary: 213 80% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 80% 94%;
+    --sidebar-accent-foreground: 213 80% 40%;
+    --sidebar-border: 220 13% 82%;
+    --sidebar-ring: 213 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    background: var(--pe-bg);
+    color: var(--pe-text);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
+/* PolyEdit Utility Classes */
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.pe-transition {
+  transition: all 0.14s ease;
+}
+
+/* Mode button active states - MS Paint style */
+.active-draw {
+  background: #e8f0fe !important;
+  border-color: var(--pe-blue) !important;
+  color: var(--pe-blue) !important;
+  box-shadow: inset 0 0 0 1px var(--pe-blue) !important;
+}
+.active-move {
+  background: #fef7e0 !important;
+  border-color: var(--pe-yellow) !important;
+  color: #8a6300 !important;
+  box-shadow: inset 0 0 0 1px var(--pe-yellow) !important;
+}
+.active-delete {
+  background: #fce8e6 !important;
+  border-color: var(--pe-red) !important;
+  color: var(--pe-red) !important;
+  box-shadow: inset 0 0 0 1px var(--pe-red) !important;
+}
+.active-insert {
+  background: #e6f4ea !important;
+  border-color: var(--pe-teal) !important;
+  color: var(--pe-teal) !important;
+  box-shadow: inset 0 0 0 1px var(--pe-teal) !important;
+}
+
+/* Toast animation */
+@keyframes toast-in {
+  from {
+    transform: translateX(-50%) translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes toast-out {
+  from {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) translateY(-30px);
+    opacity: 0;
+  }
+}
+.toast-enter {
+  animation: toast-in 0.4s cubic-bezier(.34,1.56,.64,1) forwards;
+}
+.toast-exit {
+  animation: toast-out 0.3s ease forwards;
+}
+
+/* 3D Modal animation */
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.modal-animate-in {
+  animation: modal-in 0.35s cubic-bezier(.34,1.56,.64,1) forwards;
+}
+
+/* Pulse glow for 3D button */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 6px rgba(123, 31, 162, 0.2); }
+  50% { box-shadow: 0 0 14px rgba(123, 31, 162, 0.4); }
+}
+.pulse-3d {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Active polyline pulse */
+@keyframes poly-pulse {
+  0%, 100% { box-shadow: 0 0 3px rgba(26, 115, 232, 0.15); }
+  50% { box-shadow: 0 0 8px rgba(26, 115, 232, 0.35); }
+}
+.poly-active-pulse {
+  animation: poly-pulse 2s ease-in-out infinite;
+}
+
+/* Button press */
+button:active {
+  transform: scale(0.97);
+}
+
+/* Scrollbar - light theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f3f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c4cc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9aa0a6;
+}
+
+/* Swatch active */
+.swatch-active {
+  border: 2px solid #202124 !important;
+  transform: scale(1.18);
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #202124;
+}
+
+/* MS Paint ribbon tab style */
+.ribbon-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 8px;
+  border-right: 1px solid var(--pe-border);
+}
+.ribbon-section-label {
+  font-size: 9px;
+  color: var(--pe-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
