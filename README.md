@@ -6,7 +6,7 @@ Each folder represents a specific assignment, experiment, or mini project comple
 ---
 
 
-### 📏 Polyline Editor (3D)
+###  Polyline Editor (3D)
 MiD LAB 
 
 ### deployment link
