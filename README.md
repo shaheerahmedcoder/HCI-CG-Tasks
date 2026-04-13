@@ -3,13 +3,8 @@
 This repository contains various tasks and lab work related to **Human Computer Interaction (HCI)** and **Computer Graphics (CG)**.  
 Each folder represents a specific assignment, experiment, or mini project completed during the course. (+ Deployments)
 
-The repository is structured to keep each task organized and easy to understand.
-
 ---
 
-## Repository Structure
-
-The following tasks are currently included in this repository:
 
 ### 📏 Polyline Editor (3D)
 MiD LAB 
@@ -79,6 +74,14 @@ All the content studied during Week 1-4 and also have HTML assignment too
 
 ### deployment link
 https://shaheerahmedcoder.github.io/hci-cg-2026-154/
+
+---
+
+### LERP
+### deployment link
+https://lerp154.vercel.app/
+
+---
 
 ---
 
