@@ -1,4 +1,4 @@
-# HCI-CG Tasks
+# HCI-CG Tasks (ALL DEPLOYMENT LINKS ADDED)
 
 This repository contains various tasks and lab work related to **Human Computer Interaction (HCI)** and **Computer Graphics (CG)**.  
 Each folder represents a specific assignment, experiment, or mini project completed during the course. (+ Deployments)
@@ -11,9 +11,11 @@ The repository is structured to keep each task organized and easy to understand.
 
 The following tasks are currently included in this repository:
 
-### Camera Task
-This task demonstrates basic camera handling concepts used in graphics environments.  
-It focuses on understanding how camera positioning and movement affect the scene.
+### 📏 Polyline Editor (3D)
+MiD LAB 
+
+### deployment link
+https://hcimidlab154.vercel.app/
 
 ---
 
@@ -79,3 +81,13 @@ All the content studied during Week 1-4 and also have HTML assignment too
 https://shaheerahmedcoder.github.io/hci-cg-2026-154/
 
 ---
+
+### Character Animation
+### deployment link
+https://characteranimation-154.vercel.app/
+
+---
+
+### Camera Task
+This task demonstrates basic camera handling concepts used in graphics environments.  
+It focuses on understanding how camera positioning and movement affect the scene.
