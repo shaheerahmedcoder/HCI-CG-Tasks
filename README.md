@@ -32,6 +32,13 @@ https://gravitycube-154.vercel.app/
 
 ---
 
+### Reaction Time Lab
+### deployment link
+https://reactiontimelab-154.vercel.app/
+
+
+---
+
 ### Lab 3
 Contains files and experiments related to **Lab 3** of the course.  
 It includes implementations and demonstrations of concepts covered in that lab session.
