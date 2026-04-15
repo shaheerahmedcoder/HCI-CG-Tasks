@@ -101,3 +101,6 @@ https://characteranimation-154.vercel.app/
 ### Camera Task
 This task demonstrates basic camera handling concepts used in graphics environments.  
 It focuses on understanding how camera positioning and movement affect the scene.
+
+### deployment link 
+https://3js-setup-154.vercel.app/
