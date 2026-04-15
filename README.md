@@ -32,6 +32,11 @@ https://gravitycube-154.vercel.app/
 
 ---
 
+### Mario Lab (Week 7)
+### deployment link
+https://elaborate-valkyrie-444635.netlify.app/
+
+
 ### Reaction Time Lab
 ### deployment link
 https://reactiontimelab-154.vercel.app/
