@@ -45,6 +45,13 @@ https://reactiontimelab-154.vercel.app/
 
 ---
 
+### 6 degree of freedom 
+### deployment link
+https://soft-lamington-479df1.netlify.app/
+
+---
+
+
 ### Lab 3
 Contains files and experiments related to **Lab 3** of the course.  
 It includes implementations and demonstrations of concepts covered in that lab session.
