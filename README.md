@@ -32,6 +32,12 @@ https://gravitycube-154.vercel.app/
 
 ---
 
+### Mario Lab (Week 7)
+### deployment link
+https://elaborate-valkyrie-444635.netlify.app/
+
+---
+
 ### Reaction Time Lab
 ### deployment link
 https://reactiontimelab-154.vercel.app/
@@ -101,3 +107,6 @@ https://characteranimation-154.vercel.app/
 ### Camera Task
 This task demonstrates basic camera handling concepts used in graphics environments.  
 It focuses on understanding how camera positioning and movement affect the scene.
+
+### deployment link 
+https://3js-setup-154.vercel.app/
